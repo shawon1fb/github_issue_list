@@ -60,4 +60,6 @@ class HomeController extends GetxController
       }
     }
   }
+
+  String selectedLabel='';
 }

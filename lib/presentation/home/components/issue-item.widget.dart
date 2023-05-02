@@ -28,6 +28,14 @@ class IssueItemWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          Text(
+            '#${model.id}',
+            style: TextStyle(
+              fontSize: 18.sp,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+            ),
+          ),
           Row(
             children: [
               Expanded(
@@ -46,13 +54,20 @@ class IssueItemWidget extends StatelessWidget {
                 child: Text(
                   model.issueBody,
                   maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     fontSize: 14.sp,
                   ),
                 ),
               ),
               10.horizontalSpace,
-              Text(model.author),
+              Text(
+                model.author,
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 14.sp,
+                ),
+              ),
             ],
           ),
           15.verticalSpace,
