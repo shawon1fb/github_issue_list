@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 
 import '../shared/scroll/refress_scroll.dart';
+import 'components/issue-item.widget.dart';
 import 'controllers/home.controller.dart';
 
 class HomeScreen extends GetView<HomeController> {
@@ -24,11 +26,13 @@ class HomeScreen extends GetView<HomeController> {
       body: SafeArea(
         child: Column(
           children: [
+            20.verticalSpace,
             Expanded(
               child: controller.obx(
                 (state) {
                   return RefreshScroll(
                     scrollController: scrollController,
+
                     enablePullUp: true,
                     onLoading: () async {
                       await controller.getIssueList();
@@ -39,10 +43,11 @@ class HomeScreen extends GetView<HomeController> {
                     child: ListView.builder(
                       controller: scrollController,
                       itemCount: state!.length,
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
                       itemBuilder: (context, index) {
                         var item = state[index];
-                        return ListTile(
-                          title: Text('$index => ${item.title}'),
+                        return IssueItemWidget(
+                          model: item,
                         );
                       },
                     ),

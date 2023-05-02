@@ -29,7 +29,7 @@ class HomeController extends GetxController
 
   Future<void> getIssueList() async {
     try {
-      IssueDto dto = IssueDto(repo: 'html', page: _page, owner: 'dart-lang');
+      IssueDto dto = IssueDto(repo: 'flutter', page: _page, owner: 'flutter');
       if (_page == 0) {
         change(value, status: RxStatus.loading());
       } else {

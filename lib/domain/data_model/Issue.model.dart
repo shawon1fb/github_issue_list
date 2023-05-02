@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:intl/intl.dart';
 
 class IssueDataModel {
   String title;
@@ -26,6 +27,16 @@ class IssueDataModel {
       'labels': labels,
       'id': id,
     };
+  }
+
+  String get getDate {
+    DateTime dateTime = DateTime.parse(createdAt);
+
+    /// format date dd/month/year
+
+    String formattedDate = DateFormat('dd/MM/yyyy').format(dateTime);
+
+    return formattedDate;
   }
 
   @override
