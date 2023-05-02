@@ -1,0 +1,161 @@
+[
+  {
+    "url": "https://api.github.com/repos/flutter/flutter/issues/37720",
+    "repository_url": "https://api.github.com/repos/flutter/flutter",
+    "labels_url": "https://api.github.com/repos/flutter/flutter/issues/37720/labels{/name}",
+    "comments_url": "https://api.github.com/repos/flutter/flutter/issues/37720/comments",
+    "events_url": "https://api.github.com/repos/flutter/flutter/issues/37720/events",
+    "html_url": "https://github.com/flutter/flutter/issues/37720",
+    "id": 477595529,
+    "node_id": "MDU6SXNzdWU0Nzc1OTU1Mjk=",
+    "number": 37720,
+    "title": "Should be able to limit max and min time in CupertinoDateTimePicker.",
+    "user": {
+      "login": "MattGson",
+      "id": 20088009,
+      "node_id": "MDQ6VXNlcjIwMDg4MDA5",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20088009?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/MattGson",
+      "html_url": "https://github.com/MattGson",
+      "followers_url": "https://api.github.com/users/MattGson/followers",
+      "following_url": "https://api.github.com/users/MattGson/following{/other_user}",
+      "gists_url": "https://api.github.com/users/MattGson/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/MattGson/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/MattGson/subscriptions",
+      "organizations_url": "https://api.github.com/users/MattGson/orgs",
+      "repos_url": "https://api.github.com/users/MattGson/repos",
+      "events_url": "https://api.github.com/users/MattGson/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/MattGson/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 283479235,
+        "node_id": "MDU6TGFiZWwyODM0NzkyMzU=",
+        "url": "https://api.github.com/repos/flutter/flutter/labels/new%20feature",
+        "name": "new feature",
+        "color": "f920eb",
+        "description": "Nothing broken; request for a new capability."
+      },
+      {
+        "id": 284437560,
+        "node_id": "MDU6TGFiZWwyODQ0Mzc1NjA=",
+        "url": "https://api.github.com/repos/flutter/flutter/labels/framework",
+        "name": "framework",
+        "color": "207de5",
+        "description": "flutter/packages/flutter repository. See also f: labels."
+      },
+      {
+        "id": 512693296,
+        "node_id": "MDU6TGFiZWw1MTI2OTMyOTY=",
+        "url": "https://api.github.com/repos/flutter/flutter/labels/f:%20cupertino",
+        "name": "f: cupertino",
+        "color": "207de5",
+        "description": "flutter/packages/flutter/cupertino repository."
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "comments": 2,
+    "created_at": "2019-08-06T21:10:07Z",
+    "updated_at": "2019-09-04T03:41:19Z",
+    "closed_at": null,
+    "author_association": "NONE",
+    "active_lock_reason": null,
+    "body": "The CupertinoDateTimePicker currently only supports limiting the maximum and minimum date. Sometimes you may also want to limit time. For instance, picking a DateTime before or after now. \r\n\r\nThis should work in time mode and datetime mode.",
+    "reactions": {
+      "url": "https://api.github.com/repos/flutter/flutter/issues/37720/reactions",
+      "total_count": 7,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "timeline_url": "https://api.github.com/repos/flutter/flutter/issues/37720/timeline"
+  },
+  {
+    "url": "https://api.github.com/repos/flutter/flutter/issues/39902",
+    "repository_url": "https://api.github.com/repos/flutter/flutter",
+    "labels_url": "https://api.github.com/repos/flutter/flutter/issues/39902/labels{/name}",
+    "comments_url": "https://api.github.com/repos/flutter/flutter/issues/39902/comments",
+    "events_url": "https://api.github.com/repos/flutter/flutter/issues/39902/events",
+    "html_url": "https://github.com/flutter/flutter/issues/39902",
+    "id": 489866814,
+    "node_id": "MDU6SXNzdWU0ODk4NjY4MTQ=",
+    "number": 39902,
+    "title": "Asynchonous SearchDelegate",
+    "user": {
+      "login": "JAicewizard",
+      "id": 19241481,
+      "node_id": "MDQ6VXNlcjE5MjQxNDgx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19241481?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/JAicewizard",
+      "html_url": "https://github.com/JAicewizard",
+      "followers_url": "https://api.github.com/users/JAicewizard/followers",
+      "following_url": "https://api.github.com/users/JAicewizard/following{/other_user}",
+      "gists_url": "https://api.github.com/users/JAicewizard/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/JAicewizard/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/JAicewizard/subscriptions",
+      "organizations_url": "https://api.github.com/users/JAicewizard/orgs",
+      "repos_url": "https://api.github.com/users/JAicewizard/repos",
+      "events_url": "https://api.github.com/users/JAicewizard/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/JAicewizard/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 283479235,
+        "node_id": "MDU6TGFiZWwyODM0NzkyMzU=",
+        "url": "https://api.github.com/repos/flutter/flutter/labels/new%20feature",
+        "name": "new feature",
+        "color": "f920eb",
+        "default": false,
+        "description": "Nothing broken; request for a new capability."
+      },
+      {
+        "id": 284437560,
+        "node_id": "MDU6TGFiZWwyODQ0Mzc1NjA=",
+        "url": "https://api.github.com/repos/flutter/flutter/labels/framework",
+        "name": "framework",
+        "color": "207de5",
+        "default": false,
+        "description": "flutter/packages/flutter repository. See also f: labels."
+      },
+      {
+        "id": 288585660,
+        "node_id": "MDU6TGFiZWwyODg1ODU2NjA=",
+        "url": "https://api.github.com/repos/flutter/flutter/labels/f:%20material%20design",
+        "name": "f: material design",
+        "color": "207de5",
+        "default": false,
+        "description": "flutter/packages/flutter/material repository."
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "comments": 1,
+    "created_at": "2019-09-05T16:18:45Z",
+    "updated_at": "2019-09-06T15:12:08Z",
+    "closed_at": null,
+    "author_association": "NONE",
+    "active_lock_reason": null,
+    "body": "# Use case\r\n\r\nI want to show a list of users, but filtering this list is not _super_ fast, in a custom implementation I was able to use stateful widgets and callbacks (streams might have been better) that update al the widgets when search is changed. all this would be handled outside of a build function and the widgets could call setState().\r\n\r\nBut with SearchDelegate this is not possible since you only have a synchronous buildSuggestions which is called upon text change but is also inside a build function.\r\nSo I have to do all the computation synchronously. Using a ListView.Builder helps in that I can avoid filtering offscreen users, but when you search for the last person it still goes through all the users.\r\n\r\nBeing able to use a onTextChanged method that is asynchronous instead of the buildSuggestions would allow users of flutter to have statefull widgets to do the computation asynchronously and avoiding high frame times.\r\n\r\n## Proposal\r\n\r\nAdd an onTextChange method, and make it optional and if the onTextChange is not null call that and avoid rebuilding the suggestions. Call the buildSuggestions once for the initial widget.",
+    "reactions": {
+      "url": "https://api.github.com/repos/flutter/flutter/issues/39902/reactions",
+      "total_count": 1,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "timeline_url": "https://api.github.com/repos/flutter/flutter/issues/39902/timeline"
+  }
+]
