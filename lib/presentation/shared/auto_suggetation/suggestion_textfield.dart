@@ -99,7 +99,15 @@ class _AutoSuggestionTextFieldState extends State<AutoSuggestionTextField> {
           focusNode: _focusNode,
           controller: widget.textController,
           maxLines: 1,
-          decoration: const InputDecoration(border: OutlineInputBorder()),
+          decoration:  InputDecoration(
+            border: const OutlineInputBorder(),
+            suffix: InkWell(
+              onTap: (){
+                widget.textController.clear();
+              },
+              child: const Icon(Icons.close,color: Colors.black,),
+            ),
+          ),
         ),
 
         /// padding to suggestions box
