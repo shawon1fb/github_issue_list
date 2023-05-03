@@ -12,20 +12,6 @@ class HomeScreen extends GetView<HomeController> {
   HomeScreen({Key? key}) : super(key: key);
   final ScrollController scrollController = ScrollController();
   List<SuggestionObject> suggestions = <SuggestionObject>[];
-  List<String> suggestionStrings = [
-    'Rahim',
-    'Karim',
-    'Abaas',
-    'Anis Khan',
-    'Rafiq',
-    'Raqib',
-    'Raju',
-    'Raju3',
-    'Rafiqasd',
-    'Raqibasfasf',
-    'Rajuasfas',
-    'Rajuasfasf',
-  ];
 
   final TextEditingController _nameTextController = TextEditingController();
 
@@ -48,14 +34,17 @@ class HomeScreen extends GetView<HomeController> {
               return Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-                child: AutoSuggestionTextField<String>(
+                child: AutoSuggestionTextField(
                   textController: _nameTextController,
-                  suggestionStrings: suggestionStrings,
-                  onValueChanged: (String newValue){
+                  suggestionStrings: logic.labelList,
+                  onValueChanged: (String newValue) {
                     print('new Val - $newValue');
+                    logic.filterData(newValue);
+                  },
+                  onClear: () {
+                    logic.onRefresh();
                   },
                 ),
-
               );
             }),
             20.verticalSpace,
@@ -69,6 +58,7 @@ class HomeScreen extends GetView<HomeController> {
                       await controller.getIssueList();
                     },
                     onRefresh: () async {
+                      _nameTextController.text = '';
                       await controller.onRefresh();
                     },
                     child: ListView.builder(

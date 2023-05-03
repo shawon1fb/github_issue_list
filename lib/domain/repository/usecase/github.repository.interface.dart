@@ -4,4 +4,5 @@ import '../../data_model/Issue.model.dart';
 
 abstract class IGithubRepository {
   Future<PaginationModel<IssueDataModel>> getIssues(IssueDto dto);
+ // Future<PaginationModel<String>> getLabels(IssueDto dto);
 }

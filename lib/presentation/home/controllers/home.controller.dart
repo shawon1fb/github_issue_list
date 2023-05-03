@@ -42,6 +42,10 @@ class HomeController extends GetxController
       List<IssueDataModel> newState = value ?? <IssueDataModel>[];
       if (data.list.isNotEmpty) {
         newState.addAll(data.list);
+        for (var item in data.list) {
+          _labelList.addAll(item.labels);
+        }
+
         newState = newState.toSet().toList();
       }
 
@@ -61,5 +65,17 @@ class HomeController extends GetxController
     }
   }
 
-  String selectedLabel='';
+  String selectedLabel = '';
+
+  List<String> get labelList => _labelList.toList();
+  final Set<String> _labelList = <String>{};
+
+  Future<void> filterData(String label) async {
+    List<IssueDataModel> newState = value ?? <IssueDataModel>[];
+    if (label.isNotEmpty) {
+      newState =
+          newState.where((element) => element.labels.contains(label)).toList();
+    }
+    change(newState, status: RxStatus.success());
+  }
 }

@@ -3,7 +3,7 @@ library suggestion_textfield;
 import 'package:flutter/material.dart';
 
 /// AutoSuggestion class
-class AutoSuggestionTextField<T> extends StatefulWidget {
+class AutoSuggestionTextField extends StatefulWidget {
   ///Must pass a controller
   final TextEditingController textController;
 
@@ -11,7 +11,8 @@ class AutoSuggestionTextField<T> extends StatefulWidget {
   final List<String> suggestionStrings;
 
   /// saved value on changing value
-  final ValueChanged<T>? onValueChanged;
+  final Function(String value)? onValueChanged;
+  final Function()? onClear;
 
   /// You can also define your custom decoration
   final BoxDecoration? suggestionBoxDecoration;
@@ -21,6 +22,7 @@ class AutoSuggestionTextField<T> extends StatefulWidget {
       required this.textController,
       required this.suggestionStrings,
       this.onValueChanged,
+      this.onClear,
       this.suggestionBoxDecoration})
       : super(key: key);
 
@@ -99,13 +101,17 @@ class _AutoSuggestionTextFieldState extends State<AutoSuggestionTextField> {
           focusNode: _focusNode,
           controller: widget.textController,
           maxLines: 1,
-          decoration:  InputDecoration(
+          decoration: InputDecoration(
             border: const OutlineInputBorder(),
             suffix: InkWell(
-              onTap: (){
+              onTap: () {
                 widget.textController.clear();
+                widget.onClear?.call();
               },
-              child: const Icon(Icons.close,color: Colors.black,),
+              child: const Icon(
+                Icons.close,
+                color: Colors.black,
+              ),
             ),
           ),
         ),
