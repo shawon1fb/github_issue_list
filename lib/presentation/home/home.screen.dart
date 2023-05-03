@@ -11,7 +11,6 @@ import 'controllers/home.controller.dart';
 class HomeScreen extends GetView<HomeController> {
   HomeScreen({Key? key}) : super(key: key);
   final ScrollController scrollController = ScrollController();
-  List<SuggestionObject> suggestions = <SuggestionObject>[];
 
   final TextEditingController _nameTextController = TextEditingController();
 
@@ -38,8 +37,7 @@ class HomeScreen extends GetView<HomeController> {
                   textController: _nameTextController,
                   suggestionStrings: logic.labelList,
                   onValueChanged: (String newValue) {
-                    print('new Val - $newValue');
-                    logic.filterData(newValue);
+                    logic.filterIssueByLabel(newValue);
                   },
                   onClear: () {
                     logic.onRefresh();
@@ -90,14 +88,4 @@ class HomeScreen extends GetView<HomeController> {
       ),
     );
   }
-}
-
-class SuggestionObject {
-  String name;
-  int id;
-
-  SuggestionObject({
-    required this.name,
-    required this.id,
-  });
 }

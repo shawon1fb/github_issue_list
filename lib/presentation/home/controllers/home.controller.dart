@@ -65,12 +65,10 @@ class HomeController extends GetxController
     }
   }
 
-  String selectedLabel = '';
-
   List<String> get labelList => _labelList.toList();
   final Set<String> _labelList = <String>{};
 
-  Future<void> filterData(String label) async {
+  Future<void> filterIssueByLabel(String label) async {
     List<IssueDataModel> newState = value ?? <IssueDataModel>[];
     if (label.isNotEmpty) {
       newState =
